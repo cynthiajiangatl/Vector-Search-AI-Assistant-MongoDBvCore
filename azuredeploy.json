@@ -204,15 +204,12 @@
       "type": "Microsoft.CognitiveServices/accounts/deployments",
       "apiVersion": "2022-12-01",
       "name": "[format('{0}/{1}', variables('openAiSettings').name, variables('openAiSettings').embeddingsModel.deployment.name)]",
-      "sku": {
-                "name": "Standard",
-                "capacity": 20
-      },
       "properties": {
         "model": {
           "format": "OpenAI",
           "name": "[variables('openAiSettings').embeddingsModel.name]",
-          "version": "[variables('openAiSettings').embeddingsModel.version]"
+          "version": "[variables('openAiSettings').embeddingsModel.version]",
+          "raiPolicyName": "GPT-35-Turbo-20K-TPM"
         }
       },
       "dependsOn": [
@@ -223,15 +220,12 @@
       "type": "Microsoft.CognitiveServices/accounts/deployments",
       "apiVersion": "2022-12-01",
       "name": "[format('{0}/{1}', variables('openAiSettings').name, variables('openAiSettings').completionsModel.deployment.name)]",
-      "sku": {
-                "name": "Standard",
-                "capacity": 20
-      },
       "properties": {
         "model": {
           "format": "OpenAI",
           "name": "[variables('openAiSettings').completionsModel.name]",
-          "version": "[variables('openAiSettings').completionsModel.version]"
+          "version": "[variables('openAiSettings').completionsModel.version]",
+          "raiPolicyName": "TEXT-EMBEDDING-ADA-002-20K-TPM"
         }
       },
       "dependsOn": [
