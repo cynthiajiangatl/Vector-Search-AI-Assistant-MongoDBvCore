@@ -208,12 +208,13 @@
         "model": {
           "format": "OpenAI",
           "name": "[variables('openAiSettings').embeddingsModel.name]",
-          "version": "[variables('openAiSettings').embeddingsModel.version]",
-          "raiPolicyName": "GPT-35-Turbo-20K-TPM"
-        },
-        "sku": {
-          "name": "Standard"
+          "version": "[variables('openAiSettings').embeddingsModel.version]"
         }
+        scaleSettings: {
+          scaleType: 'Standard'
+        }
+    }
+  }
       },
       "dependsOn": [
         "[resourceId('Microsoft.CognitiveServices/accounts', variables('openAiSettings').name)]"
@@ -227,11 +228,10 @@
         "model": {
           "format": "OpenAI",
           "name": "[variables('openAiSettings').completionsModel.name]",
-          "version": "[variables('openAiSettings').completionsModel.version]",
-          "raiPolicyName": "TEXT-EMBEDDING-ADA-002-20K-TPM"
-        },
-        "sku": {
-          "name": "Standard"
+          "version": "[variables('openAiSettings').completionsModel.version]"
+        }
+        scaleSettings: {
+          scaleType: 'Standard'
         }
       },
       "dependsOn": [
