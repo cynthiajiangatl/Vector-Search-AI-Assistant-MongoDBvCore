@@ -54,16 +54,6 @@
         "description": "Specifies the SKU for the Azure OpenAI resource. Defaults to **S0**"
       }
     },
-    "quota": {
-      "type": "object",
-      "defaultValue": {
-        "gpt-35-turbo": 20000,
-        "text-embedding-ada-002": 20000
-      },
-      "metadata": {
-        "description": "The quota for each model in tokens per minute."
-      }
-    },
     "mongoDbUserName": {
       "type": "string",
       "metadata": {
@@ -207,14 +197,17 @@
       "kind": "OpenAI",
       "properties": {
         "customSubDomainName": "[variables('openAiSettings').name]",
-        "publicNetworkAccess": "Enabled",
-        "quota": "[parameters('quota')]"
+        "publicNetworkAccess": "Enabled"
       }
     },
     {
       "type": "Microsoft.CognitiveServices/accounts/deployments",
       "apiVersion": "2022-12-01",
       "name": "[format('{0}/{1}', variables('openAiSettings').name, variables('openAiSettings').embeddingsModel.deployment.name)]",
+      "sku": {
+                "name": "Standard",
+                "capacity": 20
+      },
       "properties": {
         "model": {
           "format": "OpenAI",
@@ -233,6 +226,10 @@
       "type": "Microsoft.CognitiveServices/accounts/deployments",
       "apiVersion": "2022-12-01",
       "name": "[format('{0}/{1}', variables('openAiSettings').name, variables('openAiSettings').completionsModel.deployment.name)]",
+      "sku": {
+                "name": "Standard",
+                "capacity": 20
+      },
       "properties": {
         "model": {
           "format": "OpenAI",
