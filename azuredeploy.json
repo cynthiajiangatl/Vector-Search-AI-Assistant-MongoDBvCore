@@ -63,7 +63,7 @@
       "metadata": {
         "description": "The quota for each model in tokens per minute."
       }
-    }
+    },
     "mongoDbUserName": {
       "type": "string",
       "metadata": {
