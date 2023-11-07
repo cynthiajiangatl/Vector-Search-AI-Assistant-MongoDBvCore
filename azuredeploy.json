@@ -209,9 +209,9 @@
           "format": "OpenAI",
           "name": "[variables('openAiSettings').embeddingsModel.name]",
           "version": "[variables('openAiSettings').embeddingsModel.version]"
-        }
-        scaleSettings: {
-          scaleType: 'Standard'
+        },
+        "scaleSettings": {
+          "scaleType": "Standard"
         }
     }
   }
@@ -229,9 +229,9 @@
           "format": "OpenAI",
           "name": "[variables('openAiSettings').completionsModel.name]",
           "version": "[variables('openAiSettings').completionsModel.version]"
-        }
-        scaleSettings: {
-          scaleType: 'Standard'
+        },
+        "scaleSettings": {
+          "scaleType": "Standard"
         }
       },
       "dependsOn": [
