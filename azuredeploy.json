@@ -213,8 +213,6 @@
         "scaleSettings": {
           "scaleType": "Standard"
         }
-    }
-  }
       },
       "dependsOn": [
         "[resourceId('Microsoft.CognitiveServices/accounts', variables('openAiSettings').name)]"
