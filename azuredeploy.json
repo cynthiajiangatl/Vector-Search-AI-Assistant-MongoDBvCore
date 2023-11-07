@@ -211,8 +211,8 @@
           "version": "[variables('openAiSettings').embeddingsModel.version]",
           "raiPolicyName": "GPT-35-Turbo-20K-TPM"
         },
-        "scaleSettings": {
-          "scaleType": "Standard"
+        "sku": {
+          "name": "Standard"
         }
       },
       "dependsOn": [
@@ -230,8 +230,8 @@
           "version": "[variables('openAiSettings').completionsModel.version]",
           "raiPolicyName": "TEXT-EMBEDDING-ADA-002-20K-TPM"
         },
-        "scaleSettings": {
-          "scaleType": "Standard"
+        "sku": {
+          "name": "Standard"
         }
       },
       "dependsOn": [
