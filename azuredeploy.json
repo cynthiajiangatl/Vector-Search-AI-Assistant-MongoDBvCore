@@ -208,7 +208,7 @@
         "model": {
           "format": "OpenAI",
           "name": "[variables('openAiSettings').embeddingsModel.name]",
-          "version": "[variables('openAiSettings').embeddingsModel.version]"
+          "version": "[variables('openAiSettings').embeddingsModel.version]",
           "quota": 20000
         },
         "scaleSettings": {
@@ -227,7 +227,7 @@
         "model": {
           "format": "OpenAI",
           "name": "[variables('openAiSettings').completionsModel.name]",
-          "version": "[variables('openAiSettings').completionsModel.version]"
+          "version": "[variables('openAiSettings').completionsModel.version]",
           "quota": 20000
         },
         "scaleSettings": {
