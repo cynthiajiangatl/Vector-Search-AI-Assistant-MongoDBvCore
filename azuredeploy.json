@@ -202,7 +202,7 @@
     },
     {
       "type": "Microsoft.CognitiveServices/accounts/deployments",
-      "apiVersion": "2022-12-01",
+      "apiVersion": "2023-05-01",
       "name": "[format('{0}/{1}', variables('openAiSettings').name, variables('openAiSettings').embeddingsModel.deployment.name)]",
       "properties": {
         "model": {
@@ -210,8 +210,9 @@
           "name": "[variables('openAiSettings').embeddingsModel.name]",
           "version": "[variables('openAiSettings').embeddingsModel.version]"
         },
-        "scaleSettings": {
-          "scaleType": "Standard"
+        "sku": {
+          "name": "Standard",
+          "capacity": 60
         }
       },
       "dependsOn": [
@@ -228,8 +229,9 @@
           "name": "[variables('openAiSettings').completionsModel.name]",
           "version": "[variables('openAiSettings').completionsModel.version]"
         },
-        "scaleSettings": {
-          "scaleType": "Standard"
+        "sku": {
+          "name": "Standard",
+          "capacity": 60
         }
       },
       "dependsOn": [
