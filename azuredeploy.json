@@ -212,7 +212,7 @@
         },
         "sku": {
           "name": "Standard",
-          "capacity": 60
+          "capacity": 120
         }
       },
       "dependsOn": [
@@ -231,7 +231,7 @@
         },
         "sku": {
           "name": "Standard",
-          "capacity": 60
+          "capacity": 120
         }
       },
       "dependsOn": [
